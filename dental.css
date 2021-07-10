@@ -1,0 +1,463 @@
+@charset "UTF-8";
+
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+html, body, div, span, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+abbr, address, cite, code,
+del, dfn, em, img, ins, kbd, q, samp,
+small, strong, sub, sup, var,
+b, i,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section, summary,
+time, mark, audio, video {
+    margin:0;
+    padding:0;
+    border:0;
+    outline:0;
+    font-size:100%;
+    vertical-align:baseline;
+    background:transparent;
+}
+
+body {
+    color: #333333;
+    font-size: 14px;
+    font-family: "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", Meiryo, Osaka, "MS PGothic", sans-serif;
+    line-height: 1.6;
+    letter-spacing: 1px;
+    background: #eee;
+}
+
+article,aside,details,figcaption,figure,
+footer,header,hgroup,menu,nav,section {
+    display:block;
+}
+
+nav ul {
+    list-style:none;
+}
+
+blockquote, q {
+    quotes:none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+    content:'';
+    content:none;
+}
+
+a {
+    margin:0;
+    padding:0;
+    font-size:100%;
+    vertical-align:baseline;
+    background:transparent;
+}
+
+ins {
+    background-color:#ff9;
+    color:#000;
+    text-decoration:none;
+}
+
+mark {
+    background-color:#ff9;
+    color:#000;
+    font-style:italic;
+    font-weight:bold;
+}
+
+del {
+    text-decoration: line-through;
+}
+
+abbr[title], dfn[title] {
+    border-bottom:1px dotted;
+    cursor:help;
+}
+
+table {
+    border-collapse:collapse;
+    border-spacing:0;
+}
+
+hr {
+    display:block;
+    height:1px;
+    border:0;  
+    border-top:1px solid #cccccc;
+    margin:1em 0;
+    padding:0;
+}
+
+input, select {
+    vertical-align:middle;
+}
+
+body {
+    background: #efefef;
+    text-align: center;
+    color: #515151;
+    font-family: Verdana,Arial,Helvetica,'meirio','メイリオ','Hiragino Maru Gothic Pro','ヒラギノ丸ゴ Pro W4',Osaka,'ＭＳ Ｐゴシック',sans-serif;
+}
+
+.page-frame {
+    border-top: 8px solid #6CC6C4;
+}
+
+.inner {
+    margin: 0 auto;
+    width: 920px;
+}
+
+.header-top {
+    display: flex;
+    justify-content: space-between;
+}
+
+.page-logo {
+    margin-top: 55px;
+}
+
+.phone-info{
+    margin-top: 15px;
+}
+
+.phone-number{
+    margin-top: 15px;
+    font-size: 26px;
+}
+
+.phone-number i{
+    transform: scale(-1, 1);
+    margin-right: 10px;
+}
+
+.phone-info p {
+    font-size: 10px;
+}
+
+.reserve-info {
+    font-size: 10px;
+    border: solid 1px #D6D6D6;
+    margin-top: 10px;
+    padding: 10px;
+}
+
+.reserve-info span {
+    color: red;
+}
+
+.nav-ul{
+    display: flex;
+    margin-top: 15px;
+}
+
+.nav-ul .nav-list {
+    background: linear-gradient(rgb(156,227,225),rgb(108,198,196));
+    border-right: 1px solid #71C9C7;
+    border-left: 1px solid #99E1DF;
+    width: calc(100%/5);
+}
+
+.nav-ul .nav-list:first-of-type {
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+}
+
+.nav-ul .nav-list:last-of-type {
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+
+.nav-ul .nav-list:hover {
+    background: linear-gradient(rgb(108,198,196),rgb(156,227,225));
+}
+
+.nav-ul .nav-list a {
+    font-size: 14px;
+    line-height: 1.5;
+    text-decoration: none;
+    color: #fff;
+    display: block;
+    padding: 15px;
+    font-weight: bold;
+}
+
+.nav-ul .nav-list a p:last-of-type {
+    font-size: 10px;
+}
+
+.aside-main-wrapper {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.aside-list-1, .aside-list-2, .aside-list-info {
+    list-style: none;
+    text-align: left;
+}
+
+.page-aside {
+    width: 40%;
+}
+
+.aside-list-1 {
+    margin-bottom: 20px;
+}
+
+.aside-title {
+    background: linear-gradient(rgb(156,227,225),rgb(108,198,196));
+    padding: 5px 10px;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+
+.aside-title h2 {
+    font-size: 16px;
+    color: white;
+}
+
+.aside-ul-info {
+    border: 1px solid  #6CC6C4;
+    background-color: white;
+    padding: 0 15px 20px 15px;
+}
+
+.aside-list-info::before {
+    content: "";
+    display: inline-block;
+    width: 8px;
+    height: 8px;
+    border: 1px solid #6CC6C4;
+    background-color: #6CC6C4;
+    transform: rotate(45deg);
+    margin-right: 10px;
+}
+
+.aside-list-info {
+    padding: 10px 0;
+    border-bottom: 1px solid #6CC6C4;
+}
+
+.aside-list-info a {
+    text-decoration: none;
+    color: black;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.aside-list-info a:hover {
+    color: #6CC6C4;
+}
+
+.main {
+    margin-left: 20px;
+}
+
+.main-image {
+    margin-bottom: 20px;
+}
+
+.main-image img {
+    width: 100%;
+    height: 280px;
+}
+
+.news-information {
+    background-color: white;
+    text-align: left;
+    padding: 25px 20px 40px;
+}
+
+.news-information h2 {
+    font-size: 16px;
+    padding: 15px 0;
+    margin-bottom: 20px;
+    border-bottom: solid 3px #6CC6C4;
+}
+
+.news-info-content dt {
+    font-size: 13px;
+    float: left;
+    margin-right: 25px;
+    padding: 10px 5px;
+    font-weight: bold;
+}
+
+.news-info-content dd {
+    padding: 10px 5px;
+    font-size: 13px;
+    line-height: 1.3;
+    border-bottom: 1px #CCCCCC dotted;
+}
+
+.footer {
+    margin-top: 20px;
+}
+
+.footer-ul {
+    display: flex;
+    justify-content: flex-start;
+    background-color: #6CC6C4;
+    border-radius: 5px;
+    padding-left: 20px;
+}
+
+.footer-ul li {
+    margin-right: 15px;
+    font-size: 13px;
+    padding: 5px 0;
+}
+
+.far {
+    color: white;
+    margin-right: 5px;
+}
+
+.footer-ul li a{
+    text-decoration: none;
+    color: white;
+}
+
+.footer-ul li a:hover {
+    text-decoration: underline;
+}
+
+.locate-info {
+    text-align: right;
+    margin: 10px 0;
+    font-size: 13px;
+}
+
+.locate-name {
+    font-weight: bold;
+}
+
+.copyright {
+    padding: 10px 0;
+    border-top: 2px solid #6CC6C4;
+}
+
+.copyright small {
+    font-size: 12px;
+}
+
+@media (max-width:768px) {
+    .inner {
+        margin: 0;
+        width: 100%;
+    }
+
+    .header-top {
+        display: block;
+    }
+
+    .page-logo {
+        margin-top: 0;
+    }
+
+    .phone-info {
+        margin-top: 5px;
+    }
+
+    .phone-info p {
+        font-size: 10px;
+    }
+
+    .phone-number {
+        font-size: 26px;
+        margin: 15px 0;
+    }
+
+    .reserve-info {
+        display: inline;
+        font-size: 10px;
+        padding: 5px 15px;
+    }
+
+    .nav-ul {
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        width: auto;
+    }
+
+    .nav-ul .nav-list {
+        width: auto;
+    }
+
+    .header-nav, .nav-ul {
+        border: none;
+    }
+
+    .nav-ul .nav-list, .nav-ul .nav-list a{
+        border-radius: 5px;
+    }
+
+    .nav-ul .nav-list a {
+        padding: 10px 0;
+    }
+
+    .aside-main-wrapper {
+        flex-direction: column;
+        margin-top: 20px;
+        padding: 0 10px;
+    }
+
+    .page-aside {
+        order: 2;
+        width: 100%;
+    }
+
+    .main {
+        order: 1;
+        margin: 0;
+    }
+
+    .img-link img {
+        width: 100%;
+        height: 100%;
+    }
+
+    .news-information {
+        margin-bottom: 20px;
+    }
+
+    .news-info-content dt {
+        float: unset;
+    }
+
+    .news-info-content dd {
+        padding: 10px 0;
+    }
+
+    .footer {
+        padding: 0 10px;
+    }
+
+    .footer-ul {
+        flex-wrap: wrap;
+    }
+
+    .footer-ul li {
+        margin-left: 20px;
+    }
+
+    .locate-info {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 0;
+    }
+
+    .locate-info span {
+        line-height: 1.5;
+    }
+}

@@ -1,0 +1,474 @@
+@charset "UTF-8";
+
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    font-size: 16px;
+    color: #2b2b2b;
+}
+
+h1, h2, h3, p {
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    color: #2b2b2b;
+    text-decoration: none;
+}
+
+li {
+    list-style: none;
+}
+
+tbody {
+    vertical-align: inherit;
+}
+
+th, td {
+    font-weight: normal;
+    padding: 0;
+}
+
+.u-contents-wrapper {
+    max-width: 1170px;
+    text-align: center;
+    margin: 0 auto;
+    padding: 0;
+}
+
+.u-heading {
+    position: relative;
+    margin-bottom: 32px;
+    padding-bottom: 24px;
+    font-size: 36px;
+    letter-spacing: 2px;
+}
+
+.u-heading::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 40px;
+    height: 1px;
+    background-color: #2b2b2b;
+    transform: translateX(-50%);
+}
+
+.u-text {
+    padding-bottom: 40px;
+    line-height: 1.8;
+    letter-spacing: 1.4px;
+}
+
+.header {
+    position: relative;
+    width: 100%;
+    height: 620px;
+    background-image: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.2)), url("ziroimages/ziro1.jpg");
+    background-size: cover;
+    background-position: center;
+    color: #fff;
+    font-family: sans-serif;
+}
+
+.header-nav {
+    position: absolute;
+    top: 40px;
+    left: 0;
+    width: 100%;
+    height: 64px;
+}
+
+.position-change {
+    position: fixed;
+    top: 0;
+    z-index: 100;
+}
+
+.color-change {
+    color: #2b2b2b;
+    background-color: #fff;
+    border-bottom: 1px solid #a0a0a0;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.header-nav-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header-nav-logo {
+    font-size: 36px;
+    display: block;
+}
+
+.hamburgermenu {
+    position: relative;
+    width: 32px;
+    height: 64px;
+    cursor: pointer;
+}
+
+.hamburgermenu-line, .hamburgermenu-line-dummy, .hamburgermenu-line::before, .hamburgermenu-line::after {
+    position: absolute;
+    left: 0;
+    display: block;
+    width: 32px;
+    height: 1px;
+    background-color: #fff;
+}
+
+.hamburgermenu-line::before, .hamburgermenu-line::after {
+    content: "";
+}
+
+.color-change span, .color-change span:before, .color-change span::after {
+    background-color: #2b2b2b;
+}
+
+.hamburgermenu-line, .hamburgermenu-line-dummy {
+    top: 50%;
+    transition: all 0.3s;
+}
+
+.active .hamburgermenu-line {
+    transform: rotate(-45deg);
+}
+
+.active .hamburgermenu-line-dummy {
+    transform: rotate(45deg);
+}
+
+.hamburgermenu-line::before {
+    top: calc(50% - 8px);
+    transition: all 0.3s;
+}
+
+.hamburgermenu-line::after {
+    top: calc(50% + 8px);
+    transition: all 0.3s;
+}
+
+.active .hamburgermenu-line::before {
+    top: 50%;
+    opacity: 0;
+}
+
+.active .hamburgermenu-line::after {
+    top: 50%;
+    opacity: 0;
+}
+
+.header-nav-menu {
+    position: absolute;
+    top: 64px;
+    right: 0;
+    left: 850px;
+    z-index: 100;
+    height: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    overflow: hidden;
+    background-color: rgba(255,255,255,0.9);
+    transition: all 0.3s;
+}
+
+.header-menu-item {
+    padding: 0;
+    line-height: 10vh;
+    text-align: center;
+    font-size: 18px;
+    border-top: 1px solid #ccc;
+}
+
+.header-menu-item a {
+    display: block;
+}
+
+.header-menu-item:last-of-type {
+    border-bottom: 1px solid #ccc;
+}
+
+.height-change {
+    height: calc(70vh - 64px);
+}
+
+.header-title {
+    padding-top: 240px;
+    font-size: 120px;
+    font-weight: normal;
+}
+
+.header-title-sub {
+    word-spacing: 4px;
+    font-size: 32px;
+}
+
+.header-title-sub::before, .header-title-sub::after {
+    content: "";
+    display: inline-block;
+    width: 12px;
+    height: 2px;
+    margin: 0 8px;
+    background-color: #fff;
+    vertical-align: middle;
+} 
+
+.concept {
+    width: 100%;
+    padding: 80px 0;
+    background: linear-gradient(#fff 70%, #ededed 30%);
+}
+
+.concept img {
+    width: 80%;
+    height: 400px;
+    object-fit: cover;
+}
+
+.menu {
+    width: 100%;
+    padding: 80px 120px;
+}
+
+.menu-contents {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.menu-content {
+    width: 420px;
+    padding-bottom: 80px;
+    text-align: left;
+    line-height: 1.8;
+    margin: 0 40px;
+}
+
+.menu-content-image {
+    width: 100%;
+    margin-bottom: 16px;
+    object-fit: cover;
+}
+
+.menu-content-heading {
+    font-size: 24px;
+    padding-bottom: 16px;
+    text-align: center;
+}
+
+.menu-content-text {
+    letter-spacing: 0.2px;
+}
+
+.menu-content:nth-of-type(1) {
+    order: 1;
+}
+
+.menu-content:nth-of-type(2) {
+  order: 2;
+}
+
+.menu-content:nth-of-type(3) {
+    order: 3;
+}
+
+.menu-content:nth-of-type(4) {
+    order: 4;
+}
+
+.clerk {
+    width: 100%;
+    padding: 80px 80px 0 80px;
+    background: linear-gradient(#ededed 60%, #fff 40%);
+}
+
+.clerk-contents {
+    display: flex;
+    justify-content: space-between;
+    align-content: space-between;
+}
+
+.clerk-content {
+    width: 300px;
+    padding-bottom: 40px;
+    text-align: left;
+    line-height: 1.8;
+    font-size: 0;
+}
+
+.clerk-content-image {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+    margin-bottom: 12px;
+}
+
+.clerk-content-heading {
+    font-size: 24px;
+    padding-bottom: 16px;
+    text-align: center;
+}
+
+.clerk-content-text {
+    font-size: 16px;
+    letter-spacing: 1.5px;
+}
+
+.shopinformation {
+    width: 100%;
+    padding: 80px;
+}
+
+.shopinformation-contents {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.shopinformation-contents iframe {
+    margin-right: 20px;
+}
+
+.shopinformation-table {
+    width: 45%;
+    border-spacing: 16px;
+    text-align: left;
+    letter-spacing: 1.5px;
+    line-height: 3;
+}
+
+.shopinformation-table-heading {
+    border-right: 1px solid #a0a0a0;
+    width: 20%;
+}
+
+.shopinformation-table a:hover {
+    opacity: 0.5;
+}
+
+.shopinformation-table .fa{
+    margin-right: 5px;
+    color: #1DA1F2;
+}
+
+.contactus {
+    width: 100%;
+    height: 1050px;
+    padding: 80px 0;
+    background: linear-gradient(rgba(255,255,255,0.6), rgba(255,255,255,0.6)), url("ziroimages/ziro10.jpeg");
+    background-size: cover;
+    background-position: center;
+}
+
+.contactus-btn {
+    position: relative;
+    display: inline-block;
+    width: 360px;
+    background-color: yellow;
+    padding-left: 40px;
+    height: 80px;
+    line-height: 80px;
+    letter-spacing: 2px;
+    border: 1px solid #a0a0a0;
+    font-size: 20px;
+    border-radius: 10px;
+    box-shadow: 0 6px rgba(0,0,0,0.6);
+}
+
+.contactus-btn:hover {
+    opacity: 0.6;
+}
+
+.contactus-btn:active {
+    box-shadow: none;
+    position: relative;
+    top: 6px;
+}
+
+.contactus-btn::before, .contactus-btn:after {
+    content: "";
+    position: absolute;
+    border-radius: 2px;
+}
+
+.contactus-btn::before {
+    top: 30px;
+    left: 85px;
+    width: 30px;
+    height: 20px;
+    border: 1px solid #2b2b2b;
+}
+
+.contactus-btn::after {
+    top: 21px;
+    left: 90px;
+    width: 20px;
+    height: 20px;
+    border-right: 1px solid #2b2b2b;
+    border-bottom: 1px solid #2b2b2b;
+    transform: rotate(45deg);
+}
+
+form {
+    margin-top: 50px;
+}
+
+input {
+    width: 600px;
+    padding: 10px;
+    margin-bottom: 30px;
+}
+
+textarea {
+    width: 600px;
+    padding: 10px 10px 150px 10px;
+    margin-bottom: 30px;
+}
+
+.contact-btn {
+    width: 150px;
+    color: #fff;
+    background-color: red;
+    font-size: 18px;
+    padding: 10px;
+    border: 2px solid #000;
+    border-radius: 5px;
+    box-shadow: 0 6px rgba(0,0,0,0.7);
+}
+
+.contact-btn:hover {
+    opacity: 0.5;
+}
+
+.contact-btn:active {
+    box-shadow: none;
+    position: relative;
+    top: 6px;
+}
+
+.footer {
+    width: 100%;
+    text-align: center;
+    height: 50px;
+}
+
+.footer-copyright {
+    line-height: 50px;
+    letter-spacing: 1.4px;
+}
+
+@media (max-width: 670px) {
+    body{
+        font-size: 14px;
+    }
+}

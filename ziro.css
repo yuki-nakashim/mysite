@@ -1,0 +1,645 @@
+@charset "UTF-8";
+
+*, *::after, *::before {
+    box-sizing: border-box;
+}
+
+body {
+    margin : 0;
+    padding: 0;
+    font-family: sans-serif;
+    font-size: 16px;
+    color: #2b2b2b; 
+}
+
+h1, h2, h3, p {
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    color: #2b2b2b;
+    text-decoration: none;
+}
+
+li {
+    list-style: none;
+}
+
+section {
+    text-align: center;
+}
+
+tbody {
+    vertical-align: inherit;
+}
+
+th, td {
+    font-weight: normal;
+    padding: 0;
+}
+
+.u-contents-wrapper {
+    max-width: 1170px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.u-heading {
+    position: relative;
+    margin-bottom: 32px;
+    padding-bottom: 24px;
+    font-size: 36px;
+    letter-spacing: 2px;
+}
+
+.u-heading::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 40px;
+    height: 1px;
+    background-color: #2b2b2b;
+    transform: translateX(-50%);
+}
+
+.u-text {
+    padding-bottom: 40px;
+    line-height: 1.8;
+    letter-spacing: 1.4px;
+}
+
+.header {
+    position: relative;
+    width: 100%;
+    height: 620px;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url("ziroimages/shiro1.png");
+    background-size: cover;
+    background-position: center;
+    color: #fff;
+    font-family: sans-serif;
+}
+
+.header-nav {
+    position: absolute;
+    top: 40px;
+    left: 0;
+    width: 100%;
+    height: 64px;
+}
+
+.position-change {
+    position: fixed;
+    top: 0;
+    z-index: 100;
+}
+
+.color-change {
+    color: #2b2b2b;
+    background-color: #fff;
+    border-bottom: 1px solid #a0a0a0;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.header-nav-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center; 
+}
+
+.header-nav-logo {
+    font-size: 36px;
+    display: block;
+}
+
+.hamburger-menu {
+    position: relative;
+    width: 32px;
+    height: 64px;
+    cursor: pointer;
+}
+
+.hamburger-menu-line, .hamburger-menu-line-dummy, .hamburger-menu-line::before, .hamburger-menu-line::after {
+    position: absolute;
+    left: 0;
+    display: block;
+    width: 32px;
+    height: 1px;
+    background-color: #fff;
+}
+
+.hamburger-menu-line::before, .hamburger-menu-line::after {
+    content: "";
+}
+
+.color-change span, .color-change span::before, .color-change span::after {
+  background: #2b2b2b;
+}
+
+.hamburger-menu-line, .hamburger-menu-line-dummy {
+  top: 50%;
+  transition: all .3s;
+}
+
+.active .hamburger-menu-line {
+  transform: rotate(-45deg);
+}
+
+.active .hamburger-menu-line-dummy {
+  transform: rotate(45deg);
+}
+
+.hamburger-menu-line::before {
+  top: calc(50% - 8px);
+  transition: all .3s;
+}
+
+.active .hamburger-menu-line::before {
+  top: 50%;
+  opacity: 0;
+}
+
+.hamburger-menu-line::after {
+  top: calc(50% + 8px);
+  transition: all .3s;
+}
+
+.active .hamburger-menu-line::after {
+  top: 50%;
+  opacity: 0;
+}
+
+.header-menu {
+  position: absolute;
+  top: 64px;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  height: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  overflow: hidden;
+  background-color: rgba(255, 255, 255, 0.9);
+  transition: all .3s;
+}
+
+.header-menu-item {
+  padding: 0;
+  line-height: 10vh;
+  text-align: center;
+  font-size: 18px;
+  border-top: 1px solid #ccc;
+}
+
+.header-menu-item a {
+    display: block;
+}
+
+.header-menu-item:last-of-type {
+  border-bottom: 1px solid #ccc;
+}
+
+.height-change {
+  height: calc(100vh - 64px);
+}
+
+.header-title {
+    padding-top: 240px;
+    font-size: 120px;
+    font-weight: normal;
+}
+
+.header-title-sub {
+    word-spacing: 4px;
+}
+
+.header-title-sub::before, .header-title-sub::after {
+    content: "";
+    display: inline-block;
+    width: 12px;
+    height: 2px;
+    margin: 0 8px;
+    background: #fff;
+    vertical-align: middle;
+}
+
+.concept {
+    width:100%;
+    padding: 80px 0;
+    background: linear-gradient(#fff 70%, #ededed 30%);
+}
+
+.concept img {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+}
+
+.work {
+    width: 100%;
+    padding: 80px 120px;
+}
+
+.work-contents {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.work-content {
+    width: 420px;
+    text-align: left;
+    line-height: 1.8;
+    margin: 0 40px 40px;
+}
+
+.work-content-img {
+    width: 100%;
+    margin-bottom: 16px;
+    object-fit: cover;
+}
+
+.work-content-heading {
+    font-size: 24px;
+    padding-bottom: 16px;
+    text-align: center;
+}
+
+.work-content-text {
+    letter-spacing: 0.2px;
+}
+
+.work-content:nth-of-type(1) {
+    order: 1;
+}
+
+.work-content:nth-of-type(2) {
+  order: 3;
+  margin-top: -280px;
+}
+
+.work-content:nth-of-type(3) {
+    order: 2;
+    margin-top: 80px;
+}
+
+.work-content:nth-of-type(4) {
+    order: 4;
+}
+
+.florist {
+    width: 100%;
+    padding: 80px 80px 0 80px;
+    background: linear-gradient(#ededed 60%, #fff 40%);
+}
+
+.florist-contents {
+    display: flex;
+    justify-content: space-between;
+    align-content: space-between;
+}
+
+.florist-content {
+    width: 300px;
+    padding-bottom: 40px;
+    text-align: left;
+    line-height: 1.8;
+    font-size: 0;
+}
+
+.florist-content-image {
+    width: 100%;
+    margin-bottom: 12px;
+    height: 200px;
+    object-fit: cover;
+}
+
+.florist-content-heading {
+    font-size: 24px;
+    padding-bottom: 16px;
+    text-align: center;
+}
+
+.florist-content-text {
+    font-size: 16px;
+    letter-spacing: 1.5px;
+}
+
+.shopinformation {
+    width: 100%;
+    padding: 80px 120px;   
+}
+
+.shopinformation-contents {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.shopimforamtion-image {
+    width: 50%;
+    object-fit: cover;
+}
+
+.shopinformation-table {
+    width: 50%;
+    border-spacing: 16px;
+    text-align: left;
+    letter-spacing: 1.5px;
+    line-height: 2;
+}
+
+.shopinformation-table-heading {
+    border-right: 1px solid #a0a0a0;
+    width: 25%;
+}
+
+.contactus {
+    width: 100%;
+    padding: 80px 0;
+    background: linear-gradient(rgba(255, 255, 255, 0.6), rgba(255, 255, 255, 0.6)), url("ziroimages/shiro11.png");
+    background-size: cover;
+}
+
+.contactus-btn {
+    position: relative;
+    display: inline-block;
+    width: 360px;
+    background: #fff;
+    padding-left: 40px;
+    height: 80px;
+    line-height: 80px;
+    letter-spacing: 2px;
+    border: 1px solid #a0a0a0;
+    font-size: 20px;
+    border-radius: 10px;
+    box-shadow: 0 6px rgba(0,0,0,0.6);
+}
+
+.contactus-btn:hover {
+    opacity: 0.5;
+}
+
+.contactus-btn:active {
+    box-shadow: none;
+    position: relative;
+    top: 6px;
+}
+
+.contactus-btn::before, .contactus-btn::after {
+    content: "";
+    position: absolute;
+    border-radius: 2px;
+}
+
+.contactus-btn::before {
+    top: 30px;
+    left: 85px;
+    width: 30px;
+    height: 20px;
+    border: 1px solid #2b2b2b;
+}
+
+.contactus-btn::after {
+    top: 21px;
+    left: 90px;
+    width: 20px;
+    height: 20px;
+    border-right: 1px solid #2b2b2b;
+    border-bottom: 1px solid #2b2b2b;
+    transform: rotate(45deg);
+}
+
+.footer {
+    width: 100%;
+    text-align: center;
+    height: 40px;
+}
+
+.footer-copyright {
+    line-height: 40px;
+    letter-spacing: 1.4px;
+}
+
+@media (max-width: 670px) {
+    body {
+      font-size: 14px;
+}
+   
+.u-content-wrapper {
+    width: calc(100% - 32px);
+    margin: 0 auto;
+}
+
+.u-heading {
+      font-size: 28px;
+}
+
+.u-text {
+    text-align: left;
+    padding-bottom: 32px;
+}
+
+.u-display-pc {
+    display: none;
+}
+
+.header {
+    height: 355px;
+    padding-top: 0;
+    background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url(ziroimages/shiro1.png) 50%;
+    background-size: cover;
+
+}
+
+.header-nav {
+    position: fixed;
+    top: 0;
+    z-index: 100;
+}
+
+.header-nav-logo {
+      font-size: 24px;
+}
+    
+.header__title {
+    padding-top: 120px;
+    font-size: 64px;
+}
+  
+.concept {
+    padding: 40px 0;
+    background: linear-gradient(#fff 75%, #ededed 25%);
+}
+
+.work {
+    position: relative;
+    padding: 40px 0 24px;
+}
+
+.work-contents-wrapper {
+    overflow-x: auto;
+    overflow-y: visible;
+    -webkit-overflow-scrolling: touch;
+}
+    
+.work-contents-wrapper::-webkit-scrollbar {
+    width: 4px;
+    height: 4px;
+    border-radius: 8px;
+}
+
+.work-contents-wrapper::-webkit-scrollbar-thumb {
+    background: rgba(0,0,0,.15);
+    border-radius: 8px;
+}
+
+.work-contents-wrapper::-webkit-scrollbar-track {
+    background: rgba(0,0,0,.1);
+    border-radius: 8px;
+}
+
+.work-contents {
+    display: inline-flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    height: auto;
+}
+
+.work-content {
+    width: 80vw;
+    padding-bottom: 40px;
+}
+
+.work_content:not(:last-of-type) {
+    margin-right: 24px;
+}
+  
+.work::before, .work::after {
+    content: '';
+    position: absolute;
+    display: block;
+    width: 0;
+    height: 1px;
+    background: #333;
+}
+  
+.work::before {
+    bottom: 26px;
+    left: 79%;
+    overflow: hidden;
+    transition: .3s ease-in-out;
+}
+
+.work::after {
+    bottom: 30px;
+    right: 5%;
+    transform: rotate(45deg);
+    transition: .9s ease-in-out;
+}
+  
+.arrow-display.work::before {
+    width: 60px;
+}
+
+.arrow-display.work::after {
+    width: 10px;
+}
+  
+.work-content:nth-of-type(2) {
+    margin-top: 0;
+}
+
+.work-content-image {
+    height: 200px;
+    margin-bottom: 0;
+    object-fit: cover;
+}
+
+.work-image-gift {
+    object-position: 0 75%;
+}
+
+.work-image-decoration {
+    object-position: 0 65%;
+}
+
+.work-image-wedding {
+    object-position: 0 60%;
+}
+  
+.florist {
+    padding: 40px 0;
+    background: #ededed 55%;
+}
+
+.florist-contents-wrapper {
+    overflow-x: auto;
+    overflow-y: visible;
+    -webkit-overflow-scrolling: touch;
+}
+
+.florist-contents-wrapper::-webkit-scrollbar {
+    width: 4px;
+    height: 4px;
+    border-radius: 8px;
+}
+
+.florist-contents-wrapper::-webkit-scrollbar-thumb {
+    background: rgba(0,0,0,.15);
+    border-radius: 8px;
+}
+
+.florist-contents-wrapper::-webkit-scrollbar-track {
+    background: rgba(0,0,0,.1);
+    border-radius: 8px;
+}
+
+.florist-contents {
+    display: inline-flex;
+}
+
+.florist-content {
+    width: 80vw;
+}
+
+.florist-content:not(:last-of-type) {
+    margin-right: 24px;
+}
+
+.florist-content-image {
+    width: 100%;
+    margin-bottom: 0;
+}
+
+.shopinformation {
+    padding: 40px 0;
+}
+
+.shopinformation-contents {
+    display: block;
+}
+
+.shopinformation-image, .shopInformation-table {
+    width: 100%;
+}
+  
+.contactUs {
+    padding: 40px 0 64px;
+}
+
+.contactus-btn {
+    width: 280px;
+    padding-left: 50px;
+}
+
+.contactus-btn::before {
+    left: 45px;
+}
+
+.contactus-btn::after {
+    left: 50px;
+}
+}
